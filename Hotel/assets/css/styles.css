@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav .button {
+    background-color: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: black;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0077cc;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0077cc;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilo para las secciones de texto e imágenes uno al lado del otro */
+.gran-canaria-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.gran-canaria-box img {
+    max-width: 50%; /* Ajusta el tamaño de las imágenes */
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.gran-canaria-text {
+    max-width: 50%;
+}
+
+.gran-canaria-box h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .gran-canaria-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gran-canaria-box img, .gran-canaria-text {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .gran-canaria-box img {
+        margin-bottom: 20px;
+    }
+}
