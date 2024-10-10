@@ -36,21 +36,8 @@
 }
 
 /* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.myButton {
+#myButton {
 	box-shadow:inset 0px -3px 7px 0px #29bbff;
 	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
 	background-color:#2dabf9;
@@ -65,15 +52,15 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.myButton:hover {
+#myButton:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
 	background-color:#0688fa;
 }
-.myButton:active {
+#myButton:active {
 	position:relative;
 	top:1px;
 }
-.myButton2 {
+#myButton2 {
 	box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
 	background-color:#768d87;
@@ -89,11 +76,11 @@
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
 }
-.myButton2:hover {
+#myButton2:hover {
 	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
 	background-color:#6c7c7c;
 }
-.myButton2:active {
+#myButton2:active {
 	position:relative;
 	top:1px;
 }
