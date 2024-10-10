@@ -1,96 +1,235 @@
 <!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="es">
 	<head>
 		<title>Gastronomía - Gloria Thalasso & Hotels</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Reset general */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: 'Arial', sans-serif;
+				line-height: 1.6;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
+
+			.container {
+				width: 90%;
+				margin: 0 auto;
+				padding: 20px 0;
+			}
+
+			/* Encabezado */
+			h1.title, h2.title {
+				font-size: 20px;
+				color: #333;
+				margin: 20px 0 10px 0;
+				text-align: center;
+			}
+
+			/* Sección principal: 4 imágenes */
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-gap: 5px; /* Espacio reducido entre imágenes */
+				margin-bottom: 30px;
+			}
+
+			.grid-item {
+				position: relative;
+				overflow: hidden;
+				border-radius: 0px;
+			}
+
+			.grid-item img {
+				width: 100%; /* Ocupa todo el ancho del contenedor */
+				height: 200px; /* Ajustar la altura para que se recorten en altura */
+				object-fit: cover; /* Mantener la proporción de la imagen sin deformarse */
+				border-radius: 0px;
+				transition: transform 0.3s ease;
+			}
+
+			.grid-item img:hover {
+				transform: scale(1.05);
+			}
+
+			.grid-item span {
+				position: absolute;
+				bottom: 5px; /* Reducir el espacio desde el fondo */
+				left: 10px; /* Mantener un poco de espacio a la izquierda */
+				background-color: rgba(0, 0, 0, 0.04); /* Cambiar el fondo a más opaco para mejorar la visibilidad */
+				color: white;
+				padding: 5px 8px; /* Ajustar el padding para que sea más compacto */
+				border-radius: 0; /* Asegurar que el fondo no tenga bordes redondeados */
+				font-size: 14px; /* Ajustar el tamaño del texto */
+			}
+
+			/* Sección de restaurantes a la carta */
+			.grid-wide {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 20px;
+				margin-bottom: 30px;
+			}
+
+			.grid-wide img {
+				width: 100%;
+				height: auto;
+				border-radius: 0px;
+				transition: transform 0.3s ease;
+			}
+
+			.grid-wide img:hover {
+				transform: scale(1.05);
+			}
+
+			.grid-wide span {
+				display: block;
+				text-align: center;
+				margin-top: 10px;
+				font-size: 18px;
+				color: #333;
+			}
+
+			.grid-wide a {
+				color: #ffffff;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			.grid-wide a:hover {
+				text-decoration: underline;
+			}
+
+			/* Sección de galerías */
+			.slider-container {
+				width: 100%;
+				overflow: hidden;
+				margin-bottom: 30px;
+				border-radius: 0px;
+			}
+
+			.slider {
+				display: flex;
+				width: 300%;
+				animation: slide 9s infinite;
+			}
+
+			.slider img {
+				width: 25%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 0px;
+			}
+
+			@keyframes slide {
+				0% { transform: translateX(0); }
+				33% { transform: translateX(-33.333%); }
+				66% { transform: translateX(-66.666%); }
+				100% { transform: translateX(0); }
+			}
+
+			/* Ajustes responsivos */
+			@media (max-width: 900px) {
+				.grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				.grid-wide {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 600px) {
+				.grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+		</style>
 	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+	<body>
 
-			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
-					<nav id="nav">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Gloria</a> Thalasso & Hotels</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li>
+						<a href="#" class="icon solid fa-angle-down">Menú</a>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Layouts</a>
-								<ul>
-									<li><a href="habitaciones.html">Habitaciones</a></li>
-									<li><a href="ofertas.html">Ofertas</a></li>
-									<li><a href="contact.html">Contacto</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
+							<li><a href="habitaciones.html">Habitaciones</a></li>
+							<li><a href="gastronomía.html">Gastronomía</a></li>
+							<li><a href="thalasso.html">Thalasso</a></li>
+							<li><a href="ofertas.html">Ofertas</a></li>
+							<li><a href="contact.html">Contáctenos</a></li>
 						</ul>
-					</nav>
-				</header>
+					</li>
+					<li><a href="#" class="button">Reservar</a></li>
+				</ul>
+			</nav>
+		</header>
 
-			<!-- Main -->
-				<section id="main" class="container">
-					<header>
-						<h2>Gastronomía</h2>
-						<p>Descubre la cuidada propuesta de restaurantes, bares y terrazas de cada uno de nuestros hoteles.</p>
-					</header>
-					<div class="box">
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-						<div class="row">
-							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-						</div>
-					</div>
-				</section>
+		<!-- Main -->
+		<section id="main" class="container">
+			<header>
+				<h2>Gastronomía</h2>
+				<p>Descubre la cuidada propuesta de restaurantes, bares y terrazas de cada uno de nuestros hoteles.</p>
+			</header>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Grid de 4 imágenes con disposición específica -->
+			<div class="grid">
+				<div class="grid-item">
+					<img src="images/gastronomia1.jpeg" alt="Restaurante 1">
+					<span>GLORIA PALACE SAN AGUSTÍN</span>
+				</div>
+				<div class="grid-item">
+					<img src="images/gastronomia2.jpeg" alt="Restaurante 2">
+					<span>GLORIA PALACE AMADORES THALASSO & HOTEL</span>
+				</div>
+				<div class="grid-item">
+					<img src="images/gastronomia3.jpeg" alt="Restaurante 3">
+					<span>GLORIA PALACE ROYAL HOTEL & SPA</span>
+				</div>
+				<div class="grid-item">
+					<img src="images/gastronomia4.jpeg" alt="Restaurante 4">
+					<span>GLORIA IZARO CLUB HOTEL</span>
+				</div>
+			</div>
+		
+			<h2 class="title">RESTAURANTES A LA CARTA</h2>
+			<!-- Grid ancho para restaurantes a la carta -->
+			<div class="grid-wide">
+				<div class="grid-item">
+					<img src="images/gastronomia5.jpeg" alt="Restaurante Gorbea">
+					<span><a href="#">RESTAURANTE GORBEA</a></span>
+				</div>
+				<div class="grid-item">
+					<img src="images/gastronomia6.jpeg" alt="Restaurante Kaia">
+					<span><a href="#">RESTAURANTE KAIA</a></span>
+				</div>
+			</div>
+		
+			<h2 class="title">RESTAURANTES BUFFET</h2>
+			<!-- Slider para las imágenes -->
+			<div class="slider-container">
+				<div class="slider">
+					<img src="images/gastronomia7.jpeg" alt="Imagen 1">
+					<img src="images/gastronomia8.jpeg" alt="Imagen 2">
+					<img src="images/gastronomia9.jpeg" alt="Imagen 3">
+					<img src="images/gastronomia10.jpeg" alt="Imagen 4">
+				</div>
+			</div>
+		</section>
 
 	</body>
 </html>
