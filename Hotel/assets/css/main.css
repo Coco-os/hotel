@@ -184,7 +184,7 @@ hgroup,
 menu,
 nav,
 section {
-  display: flex;
+  display: block;
 }
 
 body {
@@ -3699,7 +3699,7 @@ body.landing #main {
     -webkit-transition: -webkit-transform 0.5s ease;
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
-    display: flex;
+    display: block;
     height: 44px;
     left: 0;
     position: fixed;
@@ -3737,7 +3737,7 @@ body.landing #main {
     border-radius: 6px;
     color: #fff;
     content: '\f0c9';
-    display: flex;
+    display: block;
     font-size: 16px;
     height: 2.25em;
     left: 0.5em;
@@ -3761,7 +3761,7 @@ body.landing #main {
     -webkit-transition: -webkit-transform 0.5s ease;
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
-    display: flex;
+    display: block;
     height: 100%;
     left: 0;
     overflow-y: auto;
@@ -3777,7 +3777,7 @@ body.landing #main {
     border-bottom: 0;
     border-top: solid 1px rgba(255, 255, 255);
     color: #fff;
-    display: flex;
+    display: block;
     height: 44px;
     line-height: 44px;
     padding: 0 1em 0 1em;
