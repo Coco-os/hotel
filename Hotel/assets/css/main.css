@@ -45,7 +45,6 @@
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   font-size: 15px;
   padding: 9px 23px;
   text-decoration: none;
@@ -68,7 +67,7 @@
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
+
   font-size: 15px;
   font-weight: bold;
   padding: 9px 23px;
@@ -2369,7 +2368,7 @@ input[type='checkbox']:checked + label:before,
 input[type='radio']:checked + label:before {
   background: #666;
   border-color: #666;
-  color: #ffffff;
+  color: #000;
   content: '\f00c';
 }
 
@@ -2907,7 +2906,7 @@ input[type='button'],
   background-color: #fff;
   border-radius: 6px;
   border: 0;
-  color: #ffffff;
+  color: #000;
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
@@ -2999,7 +2998,7 @@ input[type='submit'].alt.icon:before,
 input[type='reset'].alt.icon:before,
 input[type='button'].alt.icon:before,
 .button.alt.icon:before {
-  color: #fff;
+  color: #64bee8;
 }
 
 input[type='submit'].primary,
@@ -3015,6 +3014,7 @@ input[type='reset'].primary:hover,
 input[type='button'].primary:hover,
 .button.primary:hover {
   background-color: #41baff;
+  color: #000;
 }
 
 input[type='submit'].primary:active,
@@ -3022,6 +3022,7 @@ input[type='reset'].primary:active,
 input[type='button'].primary:active,
 .button.primary:active {
   background-color: #41baff;
+  color: #000;
 }
 
 input[type='submit'].disabled,
@@ -3191,6 +3192,7 @@ body.landing #page-wrapper {
 #header input[type='button']:hover,
 #header .button:hover {
   background-color: #41baff;
+  color: #000;
 }
 
 #header input[type='submit']:active,
@@ -3198,6 +3200,7 @@ body.landing #page-wrapper {
 #header input[type='button']:active,
 #header .button:active {
   background-color: #41baff;
+  color: #000;
 }
 
 #header .container {
@@ -3249,6 +3252,7 @@ body.landing #page-wrapper {
 #header.alt input[type='button']:hover,
 #header.alt .button:hover {
   background-color: rgba(255, 255, 255);
+  color: #000;
 }
 
 #header.alt input[type='submit']:active,
@@ -3256,6 +3260,7 @@ body.landing #page-wrapper {
 #header.alt input[type='button']:active,
 #header.alt .button:active {
   background-color: rgba(255, 255, 255);
+  color: #000;
 }
 
 .dropotron {
@@ -3411,9 +3416,8 @@ body.landing #page-wrapper {
 
 #main > header p {
   border-top: solid 2px #fff;
-  color: #fff;
+  color: black;
   display: inline-block;
-  font-style: normal;
   margin: 1em 0 0 0;
   padding: 1em 0 1.25em 0;
 }
